@@ -1,6 +1,8 @@
 import os
 import requests
-from OcrGather.clients.utils import *
+
+from OcrGather.clients.utils import get_picture
+
 class TextinApi:
     def __init__(self, api_key, secret_key, level=1):
         self.url = 'https://api.textin.com/ai/service/v2/recognize'
@@ -29,3 +31,9 @@ class TextinApi:
             return False, e
 
 
+if __name__ == "__main__":
+    api_key = ""
+    secret_key = ""
+    file_path = "../assets/1c3d.png"
+    client = TextinApi(api_key=api_key,secret_key=secret_key)
+    mark,text = client.get_text(file_path=file_path)

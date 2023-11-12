@@ -7,8 +7,11 @@ import base64
 import hmac
 from urllib.parse import urlencode
 import json
-from OcrGather.clients.utils import *
+import requests
+import logging
+import traceback
 
+logging.basicConfig(level=logging.DEBUG,format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
 class UrlException(Exception):
     def __init__(self, msg):
@@ -123,8 +126,10 @@ class XFyunApi:
 
                 headers = {'content-type': "application/json", 'host': 'api.xf-yun.com', 'app_id': self.app_id}
                 response = requests.post(request_url, data=json.dumps(body), headers=headers)
+                if response.status_code !=200:
+                    logging.error(f"error:{response.json()}")
+                    return False, f"error:{response.json()}"
                 tempResult = json.loads(response.content.decode())
-
                 finalResult = base64.b64decode(tempResult['payload']['result']['text']).decode()
                 if finalResult:
                     finalResult = finalResult.replace(" ", "").replace("\n", "").replace("\t", "").strip()
@@ -133,15 +138,16 @@ class XFyunApi:
                 else:
                     return False, None
         except Exception as e:
+            logging.error(traceback.format_exc())
             return False, str(e)
 
 
 
 if __name__ == '__main__':
-    app_id = "eb78ba1a"  # 控制台获取
-    secret_key = "ZmM3Mjc4NjcyNjcyYmJiNGZmNmU5NmNh"  # 控制台获取
-    api_key = "618642319dd26346780f676e9f9dfad9"  # 控制台获取
+    app_id = "eb78ba1a"  
+    api_key = os.getenv("API_KEY", "618642319dd26346780f676e9f9dfad9") 
+    secret_key = os.getenv("SECRET_KEY", "ZmM3Mjc4NjcyNjcyYmJiNGZmNmU5NmNh")
+    file_path = "../assets/1c3d.png"
     client = XFyunApi(app_id, api_key, secret_key)
-    url = 'http://edu.i-soon.net/F57Z.png?e=1667260074&token=4EPFvB7wxfBI68faAxmtgfyeaNY4h7TB2D2t3VLC:P7qGthiPaUVC71fMZMy7t9EyuZM='
-    mark, text = client.get_text(file_url=url)
-    print(text)
+    mark, text = client.get_text(file_path=file_path)
+    print(mark,text)

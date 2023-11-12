@@ -56,9 +56,10 @@ class YoudaoApi():
 
 
 if __name__ == '__main__':
-    api_key = '77f89e08f43a86f9'
-    secret_key = 'HlmF4vlvwmemBL2tG4wIYiUob3BUjZQ1'
+    api_key = os.getenv("API_KEY", "77f89e08f43a86f9") 
+    secret_key = os.getenv("SECRET_KEY", "HlmF4vlvwmemBL2tG4wIYiUob3BUjZQ1")
     client = YoudaoApi(api_key, secret_key)
-    mark, text = client.get_text(file_path='../fxbB4MuTXoAYDtN.jpg')
-    print(text)
+    file_path = "../assets/1c3d.png"
+    mark, text = client.get_text(file_path=file_path)
+    print(''.join(text.split()))
     # {'msg': 'invalid appKey', 'requestId': '307e1704-ff6a-442e-9803-d26b69218753', 'errorCode': '108'}

@@ -5,8 +5,8 @@ from DecryptLogin import login
 class Client():
     def __init__(self):
         self.client_sdks = {
-            # 'aliyun': AliyunSdk,
-            # 'tencent': TecentSdk,
+            'aliyun': AliyunApi,
+            'tencent': TecentApi,
             'baidu': BaiduApi,
             'textin': TextinApi,
             'youdao': YoudaoApi,

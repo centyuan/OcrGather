@@ -7,7 +7,7 @@ from tencentcloud.common.profile.client_profile import ClientProfile
 from tencentcloud.ocr.v20181119 import ocr_client, models
 from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
 
-class TecentSdk:
+class TecentApi:
     def __init__(self, api_key, secret_key, level=1):
         """
         创建client
@@ -71,7 +71,7 @@ class TecentApi:
     pass
 
 if __name__ == '__main__':
-    api_key = 'AKID02scCmLtJnDdyHbpvpW4stuoVxGMI1ob'
+    api_key = 'AKID02scCmLtJnDdyHbpvpW4stuoVxGMI1o2'
     secret_key = 'e8TRErLKOTYO3lkWFqLhsutlSyJkBX2R'
     tencent_client = TecentSdk(api_key=api_key, secret_key=secret_key, level=2)
     mark, text = tencent_client.get_text(file_path='resource/DYE.png')

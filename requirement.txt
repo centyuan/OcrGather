@@ -1,2 +1,0 @@
-tencentcloud-sdk-python-ocr==3.0.760
-

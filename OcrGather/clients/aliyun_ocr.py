@@ -11,7 +11,7 @@ from alibabacloud_tea_console.client import Client as ConsoleClient
 from alibabacloud_tea_util.client import Client as UtilClient
 
 
-class AliyunSdk:
+class AliyunApi:
     def __init__(self, access_key_id, access_key_secret,level=1):
         """
         创建client
@@ -69,7 +69,7 @@ class AliyunSdk:
 
 
 if __name__ == '__main__':
-    api_key = 'LTAI5tQAGXXQSPEjL2EGUG5Q'
+    api_key = 'LTAI5tQAGXXQSPEjL2EGUG52'
     secret_key = 'DgosljBDbem8Qf6oSTNJusUWtZnDmt'
     aliyun_client = AliyunSdk(access_key_id=api_key, access_key_secret=secret_key)
     mark,text = aliyun_client.get_text(file_path='resource/S5J.png')
