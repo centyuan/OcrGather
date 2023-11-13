@@ -20,7 +20,7 @@
 
 
 
-## [OcrGather](https://github.com/centyuan/OcrGather#installation)
+## [OcrGather](https://github.com/centyuan/OcrGather#OcrGather)
 
 ```
 Some third-party OCR services are encapsulated
@@ -50,7 +50,7 @@ pip install OcrGather
 
 
 
-## [Quick Start](https://github.com/CharlesPikachu/DecryptLogin#quick-start)
+## [Quick Start](https://github.com/centyuan/OcrGather#quick-start)
 
 ```
 from OcrGather import ocr 
