@@ -1,18 +1,24 @@
 # OcrGather
 
-[![maintainer](https://img.shields.io/badge/Maintainer-centyuan-blue.svg)](https://github.com/centyuan)
 
-![language](https://img.shields.io/badge/Language-Python-green.svg)
 
-[![PyPI](https://img.shields.io/pypi/v/ocr-gather)](https://pypi.org/project/ocr-gather)
+<div align="center">
+    <a href="https://github.com/centyuan"> <img src="https://img.shields.io/badge/Maintainer-centyuan-blue.svg"> 
+    </a>
+    <a href="">
+        <img src="https://img.shields.io/badge/Language-Python-green.svg">
+    </
+    <a href="https://github.com/centyuan/OcrGather"><img src="https://img.shields.io/pypi/v/OcrGather"></a>
+    <br>
+    <a href=""><img src="https://img.shields.io/github/stars/centyuan/OcrGather.svg?style=social&label=Star"></a>
+    <a href=""><img src="https://img.shields.io/github/forks/centyuan/OcrGather.svg?style=social&label=Fork"></a>
+     <a href=""><img src="https://img.shields.io/github/forks/centyuan/OcrGather.svg?style=social&label=Watch"></a>
+    <a href="https://pypi.org/project/OcrGather/"><img src="https://pepy.tech/badge/OcrGather"></a>
+</div>
 
-[![star](https://img.shields.io/github/stars/centyuan/ocr-gather.svg?style=social&label=Star)](https://github.com/centyuan/ocr-gather)
 
-[![Fork](https://img.shields.io/github/forks/centyuan/centyuan.github.io.svg?style=social&label=Fork)](https://github/centyuan/ocr-gather)
 
-[![Watch](https://img.shields.io/github/forks/centyuan/centyuan.github.io.svg?style=social&label=Watch)](https://github.com/centyuan/ocr-gather)
 
-[![PyPI - Downloads](https://pepy.tech/badge/ocr-gather)](https://pypi.org/project/ocr-gather/)
 
 ## [OcrGather](https://github.com/centyuan/OcrGather#installation)
 
