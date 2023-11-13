@@ -70,6 +70,8 @@ class BaiduApi:
             #  {'error_description': 'unknown client id', 'error': 'invalid_client'}
             return False, result.get['error'] if result else 'Api Key或Secret Key错误'
 
+if __name__ == "__main__":
+    
 
 # class BaiduSdk:
 #     def __init__(self, app_id, api_key, secret_key, level=1):

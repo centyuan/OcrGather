@@ -1,10 +1,9 @@
 from OcrGather.clients import *
-from DecryptLogin import login
 
 
 class Client():
     def __init__(self):
-        self.client_sdks = {
+        self.supported_clients = {
             'aliyun': AliyunApi,
             'tencent': TecentApi,
             'baidu': BaiduApi,
@@ -13,5 +12,5 @@ class Client():
             'xfyun': XFyunApi,
             'tesseract': TesseractOcr,
         }
-        for k, v in self.client_sdks.items():
+        for k, v in self.supported_clients.items():
             setattr(self, k, v)
