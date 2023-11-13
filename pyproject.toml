@@ -1,6 +1,6 @@
 [project]
 name = "OcrGather"
-version = "0.1.0"
+version = "0.1.1"
 description = "Some third-party OCR services are encapsulated"
 authors = [
     {name = "centyuan", email = "centyuan@outlook.com"},
