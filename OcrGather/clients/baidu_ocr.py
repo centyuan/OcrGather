@@ -71,55 +71,8 @@ class BaiduApi:
             return False, result.get['error'] if result else 'Api Key或Secret Key错误'
 
 if __name__ == "__main__":
-    
-
-# class BaiduSdk:
-#     def __init__(self, app_id, api_key, secret_key, level=1):
-#         """
-#
-#         :param app_id:
-#         :param api_key:
-#         :param secret_key:
-#         :param level:识别级别
-#         (1:调用通用文字识别（标准版）
-#          2:调用通用文字识别（高精度版）
-#          3:网络图片文字识别
-#         )
-#         """
-#         self.client = AipOcr(app_id, api_key, secret_key)
-#         self.level = level
-#
-#     def get_text(self, file_path=None, file_url=None):
-#         """
-#         识别验证码
-#         :param file_path:
-#         :param file_url:
-#         :return: {'words_result': [{'words': '6RS5'}], 'words_result_num': 1, 'log_id': 1581898086821811984}
-#         """
-#         try:
-#             if file_path:
-#                 with open(file_path, 'rb') as f:
-#                     image = f.read()
-#                     if self.level == 2:
-#                         res_image = self.client.basicAccurate(image)
-#                     elif self.level == 3:
-#                         res_image = self.client.webImage(image)
-#                     else:
-#                         # options 可选参数：CHN_ENG中英混合
-#                         res_image = self.client.basicGeneral(image, options={'language_type': 'CHN_ENG'})
-#                     print('防护', res_image)
-#                     # result = json.loads(res_image)
-#                     result = res_image
-#                     # return True, result['words_result'][0]['words']
-#                     return True, [item.get('words') for item in result['words_result']]
-#             elif file_url:
-#                 if self.level == 2:
-#                     res_url = self.client.basicAccurateUrl(file_url)
-#                 elif self.level == 3:
-#                     res_url = self.client.webImageUrl(file_url)
-#                 else:
-#                     res_url = self.client.basicGeneralUrl(file_url, options={'language_type': 'CHN_ENG'})
-#                 result = json.loads(res_url)
-#                 return True, result['words_result'][0]['words']
-#         except Exception as e:
-#             return False, str(e)
+    api_key = ""
+    secret_key = ""
+    file_path = ""
+    client = BaiduApi(api_key=api_key,secret_key=secret_key)
+    mark,text = client.get_text(file_path=file_path)

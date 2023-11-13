@@ -36,8 +36,8 @@ pip install OcrGather
 |   有道OCR    |       有道       | ocr.youdao()  |    Y    |
 |   讯飞OCR    |       讯飞       |  ocr.xfyun()  |    Y    |
 |   合合OCR    |     合合信息     | ocr.textin()  |    Y    |
-|   腾讯OCR    |       腾讯       | ocr.tencent() |    Y    |
-|   阿里OCR    |       阿里       | ocr.aliyun()  |    Y    |
+|   腾讯OCR    |       腾讯       | ocr.tencent() |    X    |
+|   阿里OCR    |       阿里       | ocr.aliyun()  |    X    |
 |   百度OCR    |       百度       | ocr.aliyun()  |    Y    |
 |  Tesseract   |                  |               |    X    |
 |     ...      |       ...        |               |   ...   |

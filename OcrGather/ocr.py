@@ -4,8 +4,8 @@ from OcrGather.clients import *
 class Client():
     def __init__(self):
         self.supported_clients = {
-            'aliyun': AliyunApi,
-            'tencent': TecentApi,
+            # 'aliyun': AliyunApi,
+            # 'tencent': TecentApi,
             'baidu': BaiduApi,
             'textin': TextinApi,
             'youdao': YoudaoApi,
