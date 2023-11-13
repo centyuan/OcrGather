@@ -1,7 +1,5 @@
 # OcrGather
 
-
-
 <div align="center">
     <a href="https://github.com/centyuan"> <img src="https://img.shields.io/badge/Maintainer-centyuan-blue.svg"> 
     </a>
@@ -9,16 +7,13 @@
         <img src="https://img.shields.io/badge/Language-Python-green.svg">
     </
     <a href="https://github.com/centyuan/OcrGather"><img src="https://img.shields.io/pypi/v/OcrGather"></a>
+    <a href="https://pdm-project.org"><img src="https://img.shields.io/badge/pdm-managed-blueviolet"</a>
     <br>
     <a href=""><img src="https://img.shields.io/github/stars/centyuan/OcrGather.svg?style=social&label=Star"></a>
     <a href=""><img src="https://img.shields.io/github/forks/centyuan/OcrGather.svg?style=social&label=Fork"></a>
      <a href=""><img src="https://img.shields.io/github/forks/centyuan/OcrGather.svg?style=social&label=Watch"></a>
     <a href="https://pypi.org/project/OcrGather/"><img src="https://pepy.tech/badge/OcrGather"></a>
 </div>
-
-
-
-
 
 ## [OcrGather](https://github.com/centyuan/OcrGather#OcrGather)
 
@@ -37,6 +32,7 @@ pip install OcrGather
 
 ## [Support List](https://github.com/centyuan/OcrGather#support-list)
 
+
 | Service Name | Service Provider |  client name  | Support |
 | :----------: | :--------------: | :-----------: | :-----: |
 |   有道OCR    |       有道       | ocr.youdao()  |    Y    |
@@ -47,8 +43,6 @@ pip install OcrGather
 |   百度OCR    |       百度       | ocr.aliyun()  |    Y    |
 |  Tesseract   |                  |               |    X    |
 |     ...      |       ...        |               |   ...   |
-
-
 
 ## [Quick Start](https://github.com/centyuan/OcrGather#quick-start)
 
@@ -64,4 +58,3 @@ file_path =  "../assets/1c3d.png"
 mark, text = client.get_text(file_path=file_path)
 # 或 client.get_text(file_url=file_url)
 ```
-
